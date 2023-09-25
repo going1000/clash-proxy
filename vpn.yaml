@@ -60,6 +60,11 @@ proxies:
     server: 192.168.1.17
     port: 8889
     udp: true
+   - name: "charles_http_test"
+    type: socks5
+    server: 192.168.1.17
+    port: 8888
+    udp: true
 
 
 proxy-groups:
@@ -68,6 +73,7 @@ proxy-groups:
     type: select
     proxies:
       - charles_socks5_test
+      - charles_http_test
 
 # 关于 Rule Provider 请查阅：https://lancellc.gitbook.io/clash/clash-config-file/rule-provider
 rule-providers: null
