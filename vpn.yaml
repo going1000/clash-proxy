@@ -57,15 +57,9 @@ proxies:
   # VMess(Websocket + TLS)
   - name: "charles_socks5_test"
     type: socks5
-    server: 192.168.1.17
+    server: 192.168.30.247
     port: 8889
     udp: true
-  - name: "charles_http_test"
-    type: http
-    server: 192.168.1.17
-    port: 8888
-    udp: true
-
 
 proxy-groups:
   # 代理节点选择
@@ -73,7 +67,6 @@ proxy-groups:
     type: select
     proxies:
       - charles_socks5_test
-      - charles_http_test
 
 # 关于 Rule Provider 请查阅：https://lancellc.gitbook.io/clash/clash-config-file/rule-provider
 rule-providers: null
